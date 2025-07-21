@@ -614,10 +614,10 @@ footer .cd-top {
 }
 .home_page .services_provide .services_container .row .column {
   padding: 0 20px;
-  height: 500px;
+  margin-bottom: 50px;
 }
 .home_page .services_provide .services_container .row .column .card {
-  padding: 20px 10px;
+  height: 450px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   border: 0px;
   border-radius: 20px;
@@ -626,8 +626,18 @@ footer .cd-top {
   cursor: pointer;
   overflow: hidden;
   transform: translateY(0);
-  padding: 50px;
+  padding: 20px;
   border: 2px dashed transparent;
+}
+@media screen and (max-width: 1200px) {
+  .home_page .services_provide .services_container .row .column .card {
+    height: 500px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .home_page .services_provide .services_container .row .column .card {
+    height: 350px;
+  }
 }
 .home_page .services_provide .services_container .row .column .card:hover {
   background-color: #f3f1fd;
@@ -643,6 +653,21 @@ footer .cd-top {
   font-size: 24px;
   font-weight: 500;
   text-transform: capitalize;
+}
+@media screen and (max-width: 992) {
+  .home_page .services_provide .services_container .row .column .card .card-body h5 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 576) {
+  .home_page .services_provide .services_container .row .column .card .card-body h5 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 992) {
+  .home_page .services_provide .services_container .row .column .card .card-body p {
+    font-size: 10px;
+  }
 }
 .home_page .services_provide .services_container .row .column .card .readMore {
   justify-content: start;
@@ -944,6 +969,7 @@ footer .cd-top {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   margin: 10px 5px 10px 15px;
   border-radius: 20px;
+  height: 400px;
 }
 .home_page .testimonials .container .row_testimonials div .card .card-body {
   padding: 50px 30px;
