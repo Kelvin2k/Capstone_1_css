@@ -1045,7 +1045,7 @@ footer .cd-top {
   padding: 0 25%;
   gap: 30px;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 992px) {
   .home_page .stay_updated .container .email {
     grid-template-columns: 2fr 1fr;
     padding: 0;
