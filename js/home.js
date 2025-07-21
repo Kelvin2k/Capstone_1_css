@@ -6,7 +6,7 @@ function home_hiddenButton() {
 function initSlick() {
   var $slider = $(".row_testimonials");
 
-  if (window.matchMedia("(max-width: 576px)").matches) {
+  if (window.matchMedia("(max-width: 992px)").matches) {
     $slider.slick({
       slidesToShow: 1,
       slidesToScroll: 1,
