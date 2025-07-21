@@ -256,6 +256,21 @@ footer .content_down p span {
     font-size: 15px;
   }
 }
+footer .cd-top--is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+footer .cd-top {
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  padding: 20px 30px;
+  background-color: #179a46;
+  color: white;
+  border-radius: 50%;
+  font-size: 30px;
+  color: white;
+}
 
 .blog_item_page {
   padding: 80px 0;
