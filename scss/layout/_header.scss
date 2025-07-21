@@ -1,0 +1,61 @@
+header {
+  background-color: white;
+  nav.navbar {
+    .container {
+      @media screen and (max-width: 576px) {
+        padding: 0 20px;
+      }
+      a.navbar-brand {
+        color: $color_main;
+        font-weight: 700;
+      }
+      a.nav-link {
+        font-weight: 500;
+      }
+      a.active {
+        color: $color_main;
+        font-weight: 500;
+      }
+      button {
+        span {
+        }
+      }
+      .collapse {
+        ul {
+          li {
+            // left: 0;
+            // bottom: 0;
+            // height: 1px;
+            // background-color: $color_main;
+            // width: 5px;
+            a {
+              position: relative;
+              &:hover::before {
+                width: 80%;
+              }
+              &:before {
+                content: "";
+                position: absolute;
+                // left: 0;
+                bottom: 0;
+                height: 3px;
+                background-color: $color_main;
+                width: 0;
+                transition: all 0.5s;
+              }
+            }
+            i.fa-magnifying-glass {
+              padding: 10px 10px;
+              background-color: rgba(128, 128, 128, 0.068);
+              border-radius: 50px;
+              font-size: 10px;
+              color: $color_main;
+            }
+            i.fa-moon {
+            }
+          }
+        }
+      }
+    }
+  }
+}

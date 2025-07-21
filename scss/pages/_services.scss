@@ -1,0 +1,43 @@
+.service_page {
+  .container {
+    .service_row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+      padding: 80px 20px;
+      //   border: ;
+      .image {
+        overflow: hidden;
+        img {
+          border-radius: 15px;
+          object-fit: center;
+          object-position: center;
+          transform-origin: center;
+          transition: all 0.5s;
+          width: 100%;
+        }
+        &:hover img {
+          transform: scale(1.2);
+        }
+      }
+      .content {
+        p.subtitle {
+          color: $color_red;
+          @include textSubTitle;
+          @media screen and (max-width: 576px) {
+            @include textSubTitle576;
+          }
+        }
+        h2 {
+          @include textTitle;
+          @media screen and (max-width: 576px) {
+            @include textTitle576;
+          }
+        }
+        .readMore {
+          @include readMore;
+        }
+      }
+    }
+  }
+}

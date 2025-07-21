@@ -1,0 +1,121 @@
+.blog_item_page {
+  padding: 80px 0;
+  .container {
+    .blog_item_title {
+      text-align: center;
+      a {
+        text-decoration: none;
+        border-radius: 10px;
+        padding: 5px 15px;
+        background-color: $color_main;
+        color: white;
+        font-size: 15px;
+      }
+      h2 {
+        @include textTitle;
+        margin-top: 30px;
+        margin-bottom: 20px;
+      }
+      .subtitle {
+        margin-bottom: 10px;
+        p {
+          @include textNormal;
+          font-size: 16px;
+          margin-right: 20px;
+          i {
+            color: black;
+          }
+          span {
+            color: black;
+            transition: all 0.5s;
+            cursor: pointer;
+            &:hover {
+              color: red;
+            }
+          }
+        }
+      }
+    }
+    .image {
+      // margin-bottom: 70px;
+      img {
+        width: 100%;
+        border-radius: 15px;
+      }
+    }
+    .content_down {
+      padding: 30px 100px;
+      @media screen and (max-width: 576px) {
+        padding: 30px 20px;
+      }
+      p {
+        @include textNormal;
+        margin-bottom: 80px;
+      }
+      .change_post {
+        .pre_post {
+          text-decoration: none;
+          p {
+            @include textNormal;
+            margin-bottom: 5px;
+
+            i {
+              font-size: 15px;
+              margin-right: 5px;
+            }
+          }
+          h4 {
+            color: black;
+            transition: all 0.5s;
+            font-size: 30px;
+            transition: all 0.5s;
+            @media screen and (max-width: 576px) {
+              font-size: 20px;
+            }
+            &:hover {
+              color: $color_main;
+            }
+          }
+        }
+      }
+
+      h5 {
+        margin-top: 50px;
+        font-size: 28px;
+        font-weight: 600;
+      }
+      p.email_text {
+        @include textNormal;
+        margin-bottom: 30px;
+      }
+      .mb-3 {
+        label {
+        }
+        textarea {
+          background-color: #f9f8fd;
+        }
+        input {
+          background-color: #f9f8fd;
+        }
+      }
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 20px;
+      }
+      .button {
+        button {
+          padding: 15px 40px;
+          background-color: $color_main;
+          color: black;
+          border-radius: 10px;
+          transition: all 0.5s;
+          &:hover {
+            background-color: darkgreen;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

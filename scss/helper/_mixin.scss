@@ -1,0 +1,114 @@
+@mixin textHeaderTitle() {
+  font-size: 66px;
+  font-weight: 600;
+  color: white;
+}
+@mixin textTitle() {
+  font-size: 40px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+@mixin textTitle576() {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+@mixin textSubTitle() {
+  font-size: 18px;
+  font-weight: 400;
+  color: $color_red;
+  text-transform: uppercase;
+}
+
+@mixin textSubTitle576() {
+  font-size: 18px;
+  font-weight: 400;
+  color: $color_red;
+  text-transform: uppercase;
+}
+
+@mixin textNormal() {
+  font-size: 18px;
+  font-weight: 400;
+  color: #696969;
+}
+
+@mixin textNormal576() {
+  font-size: 15px;
+  font-weight: 400;
+  color: #696969;
+}
+@mixin buttonNormal() {
+  color: $color_main;
+  padding: 15px 40px;
+  background-color: $color_main;
+  border-radius: 15px;
+  text-decoration: none;
+  background-color: white;
+}
+@mixin buttonHover() {
+  text-decoration: none;
+  color: white;
+  padding: 15px 40px;
+  background-color: transparent;
+  border-radius: 15px;
+  border: 1px solid white;
+  transition: all 0.5s;
+  &:hover {
+    background-color: white;
+    color: $color_main;
+  }
+}
+
+@mixin readMore() {
+  p {
+    width: fit-content;
+    margin-top: 30px;
+    color: black;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-weight: 500;
+    padding-bottom: 3px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: $color_main;
+    }
+    &:hover {
+      color: $color_main;
+    }
+  }
+}
+@mixin readMoreTest() {
+  p {
+    width: fit-content;
+    margin-top: 30px;
+    color: black;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-weight: 500;
+    padding-bottom: 3px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: $color_main;
+    }
+    &:hover {
+      color: $color_main;
+    }
+  }
+}

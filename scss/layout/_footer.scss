@@ -1,0 +1,89 @@
+footer {
+  color: white;
+  padding-top: 80px;
+  padding-bottom: 20px;
+  background-color: black;
+  @media screen and (max-width: 576px) {
+    padding-top: 30px;
+  }
+  .container {
+    .content_up {
+      grid-template-columns: 1.25fr 1fr;
+      gap: 10px;
+      .content_left {
+        h3 {
+          color: white;
+          font-size: $fs_footer_header;
+          @media screen and (max-width: 576px) {
+            font-size: 15px;
+          }
+        }
+        p {
+          font-size: $fs_footer_text;
+          color: #666666;
+          @media screen and (max-width: 576px) {
+            font-size: 10px;
+          }
+          a {
+            text-decoration: none;
+            color: #666666;
+            transition: all 0.5s;
+            &:hover {
+              color: white;
+            }
+          }
+        }
+        .network_icon {
+          margin-top: 20px;
+          i {
+            margin-right: 10px;
+            color: #666666;
+          }
+        }
+      }
+      .content_right {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        .column {
+          h3 {
+            font-size: $fs_footer_header;
+            @media screen and (max-width: 576px) {
+              font-size: 15px;
+            }
+          }
+          p {
+            font-size: $fs_footer_text;
+            color: #666666;
+            @media screen and (max-width: 576px) {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .content_down {
+    margin-top: 40px;
+    border-top: 1px solid #6666663b;
+    padding-top: 20px;
+    text-align: center;
+    @media screen and (max-width: 576px) {
+      margin-top: 0px;
+    }
+
+    p {
+      color: #666666;
+      font-size: $fs_footer_text;
+      @media screen and (max-width: 576px) {
+        font-size: 15px;
+      }
+
+      span {
+        color: red;
+        @media screen and (max-width: 576px) {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
