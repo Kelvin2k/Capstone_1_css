@@ -1,5 +1,8 @@
 .service_page {
   .container {
+    hr {
+      opacity: 0.05;
+    }
     .service_row {
       display: grid;
       grid-template-columns: 1fr 1fr;

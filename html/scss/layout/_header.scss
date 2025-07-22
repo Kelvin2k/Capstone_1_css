@@ -1,5 +1,10 @@
 header {
   background-color: white;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
   nav.navbar {
     .container {
       @media screen and (max-width: 576px) {
@@ -23,20 +28,19 @@ header {
       .collapse {
         ul {
           li {
-            // left: 0;
-            // bottom: 0;
-            // height: 1px;
-            // background-color: $color_main;
-            // width: 5px;
+            transition: all 0.5s;
+            &:hover a {
+              color: $color_main !important;
+            }
             a {
               position: relative;
+              transition: all 0.5s;
               &:hover::before {
                 width: 80%;
               }
               &:before {
                 content: "";
                 position: absolute;
-                // left: 0;
                 bottom: 0;
                 height: 3px;
                 background-color: $color_main;
@@ -50,8 +54,24 @@ header {
               border-radius: 50px;
               font-size: 10px;
               color: $color_main;
+              transition: all 0.5s;
+              cursor: pointer;
+              &:hover {
+                background-color: $color_main;
+                color: white;
+              }
             }
             i.fa-moon {
+              &::before {
+                display: inline;
+                color: pink;
+              }
+            }
+            i.fa-sun {
+              display: none;
+              &::before {
+                color: pink;
+              }
             }
           }
         }

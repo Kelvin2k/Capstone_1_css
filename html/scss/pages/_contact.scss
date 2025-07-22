@@ -1,0 +1,92 @@
+// contact page
+.page_contact {
+  padding-top: 80px;
+  .container {
+    .content_up {
+      p.subtitle {
+        @include textSubTitle;
+      }
+      h2 {
+        @include textTitle;
+      }
+    }
+    .content_down {
+      grid-template-columns: 1.5fr 1fr;
+      gap: 50px;
+      .content_left {
+        .content_name_email {
+          grid-template-columns: 1fr 1fr;
+          gap: 20px;
+          input {
+            padding: 10px 20px;
+            background-color: #f9f8fd;
+          }
+        }
+        input {
+          padding: 10px 20px;
+          background-color: #f9f8fd;
+        }
+        .message_text_area {
+          label {
+          }
+          textarea {
+            padding: 10px 20px;
+            background-color: #f9f8fd;
+          }
+        }
+        .button {
+          display: flex;
+          justify-content: end;
+          button.btn_send_message {
+            background-color: $color_main;
+            color: white;
+            transition: all 0.5s;
+            padding: 10px 30px;
+            border-radius: 10px;
+            border: none;
+            &:hover {
+              background-color: #106d32;
+            }
+          }
+        }
+      }
+      .content_right {
+        .row {
+          margin-bottom: 20px;
+          display: grid;
+          grid-template-columns: 0.05fr 1fr;
+          i {
+            color: $color_main;
+            font-size: 20px;
+            padding-top: 5px;
+          }
+          .content {
+            h4 {
+              font-size: 20px;
+              font-weight: 500;
+            }
+            p {
+              @include textNormal;
+            }
+            a {
+              text-decoration: none;
+              color: black;
+              @include textNormal;
+              transition: all 0.5s;
+              &:hover {
+                text-decoration: underline;
+                color: $color_main;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .map {
+    margin-top: 50px;
+    iframe {
+      width: 100%;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 .home_page {
   .home_carousel {
-    // height: 100vh;
+    margin-bottom: 0;
     .carousel_item {
       position: relative;
       width: 100vw;
@@ -342,7 +342,7 @@
       }
       h2 {
         @include textTitle;
-        margin-bottom: 30px;
+        // margin-bottom: 30px;
       }
       .row {
         .row_card {
