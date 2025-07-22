@@ -63,7 +63,7 @@
                             <a class="nav-link" href="./contact.html">Contact</a>
                         </li>
                         <li class="d-flex align-items-center me-2">
-                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-magnifying-glass" onclick="findPage()"></i>
                         </li>
                         <li class="d-flex align-items-center">
                             <i class="fa-regular fa-moon"></i>
@@ -115,8 +115,8 @@
                         classes, catering to puppies, adult dogs, and seniors. With patience and expertise, we help your
                         dog become a well-mannered companion you can be proud of.</p>
 
-                    <div class="readMore ">
-                        <p>Read More</p>
+                    <div class="readMore">
+                        <p class="readMore">Read More</p>
                     </div>
                 </div>
                 <div class="image">
@@ -216,6 +216,16 @@
         <a href="#" class="cd-top text-replace js-cd-top">
             <i class="fa-solid fa-chevron-up"></i>
         </a>
+
+        <div class="search_screen_overlay">
+        </div>
+        <div class="search_x_mark">
+            <i class="fa-solid fa-xmark" onclick="closeFindPage()"></i>
+        </div>
+        <div class="search_bar">
+            <input type="text" placeholder="Search...">
+            <button class="search">Search</button>
+        </div>
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

@@ -43,10 +43,70 @@ document.addEventListener("DOMContentLoaded", () => {
     applyDarkTheme();
   }
 });
-document.querySelector(".fa-sun").onclick = function applyLightTheme() {
+// document.querySelector(".fa-sun").onclick = function applyLightTheme() {
+//   localStorage.setItem("theme", "light");
+//   location.reload();
+// };
+
+document.querySelector(".fa-sun").onclick = applyLightTheme;
+
+function applyLightTheme() {
   localStorage.setItem("theme", "light");
   location.reload();
-};
+  document.querySelector(".fa-sun").style.display = "none";
+  document.querySelector(".fa-moon").style.display = "inline";
+
+  var hr = document.querySelectorAll("hr");
+  hr.forEach((hr) => {
+    hr.style.opacity = "";
+    hr.style.color = "";
+    hr.style.transition = "opacity 0.3s ease, color 0.3s ease";
+  });
+
+  var navbars = document.querySelectorAll(".navbar");
+  iconSun.forEach((iconSun) => {
+    iconSun.style.color = "";
+    iconSun.style.transition = "color 0.3s ease";
+  });
+
+  var backgroundBlack = document.querySelectorAll(
+    "body, .home_page, .aboutUs, .offer, .video, .testimonials, .stay_updated, .about_page, .aboutUs, .service_page, .gallery_page, .card, .card-body, .fa-facebook, .fa-twitter, .fa-linkedin"
+  );
+  backgroundBlack.forEach((backgroundBlack) => {
+    backgroundBlack.style.backgroundColor = "";
+    backgroundBlack.style.transition = "background-color 0.3s ease";
+  });
+
+  var backgroundGray = document.querySelectorAll(
+    ".services_provide, .ourPlan, .ourTeam, .pages_blog, .blog_item_page, .testimonials"
+  );
+  backgroundGray.forEach((backgroundGray) => {
+    backgroundGray.style.backgroundColor = "";
+    backgroundGray.style.transition = "background-color 0.3s ease";
+  });
+
+  var Title = document.querySelectorAll(
+    "h2, h4, h5, .readMore, .des, .card-text, span, .author_name ,.fa-clock, .fa-user"
+  );
+  Title.forEach((Title) => {
+    Title.style.color = "";
+    Title.style.transition = "color 0.3s ease";
+  });
+
+  var pText = document.querySelectorAll(
+    "p.text, .p_left, .p_right, .pIcon, .email_text, label, .quote ,.author_city, .contact_text, .text_email"
+  );
+  pText.forEach((ptext) => {
+    ptext.style.color = "";
+    ptext.style.transition = "color 0.3s ease";
+  });
+
+  var footer = document.querySelectorAll("footer");
+  footer.forEach((footer) => {
+    footer.style.backgroundColor = "";
+    footer.style.transition = "background-color 0.3s ease";
+  });
+}
 document.querySelector(".fa-moon").onclick = applyDarkTheme;
 
 function applyDarkTheme() {
@@ -88,7 +148,7 @@ function applyDarkTheme() {
 
   // color white
   var Title = document.querySelectorAll(
-    "h2, h4, h5, .readMore, .des, .card-text, span, .author_name ,.fa-clock, .fa-user, .ul li span, .layOut, .pages a, .navbar a.nav-link, i.fa-moon "
+    "h2, h4, h5, .readMore, .des, .card-text, span, .author_name ,.fa-clock, .fa-user, .ul li span, .layOut, .pages a, .navbar a.nav-link, i.fa-moon"
   );
   Title.forEach((Title) => {
     Title.style.color = "white";
@@ -96,7 +156,7 @@ function applyDarkTheme() {
 
   // color gray
   var pText = document.querySelectorAll(
-    "p.text, .p_left, .p_right, .pIcon, .email_text, label, .quote ,.author_city, .contact_text, .text_email"
+    "p.text, .p_left, .p_right, .pIcon, .email_text, label, .quote ,.author_city, .contact_text, .text_email, .search_result_text"
   );
   pText.forEach((ptext) => {
     ptext.style.color = "#AFAFAF";
@@ -111,4 +171,48 @@ function applyDarkTheme() {
 
 function findPage() {
   console.log("hello");
+  document.querySelector(".search_screen_overlay").style.display = "inline";
+  document.querySelector(".search_x_mark").style.display = "block";
+  document.querySelector(".search_bar input").style.display = "block";
+  document.querySelector(".search_bar button").style.display = "block";
+}
+
+function closeFindPage() {
+  document.querySelector(".search_screen_overlay").style.display = "none";
+  document.querySelector(".search_x_mark").style.display = "none";
+  document.querySelector(".search_bar input").style.display = "none";
+  document.querySelector(".search_bar button").style.display = "none";
+}
+
+function lookingforInfo() {
+  console.log("hello");
+  const searchInput = document.querySelector(".search_bar input");
+  if (!searchInput) {
+    console.error("Search input not found: .search_bar input");
+    return;
+  }
+
+  const keywords = searchInput.value.trim();
+  if (keywords === "") {
+    alert("Please enter a search query");
+    return;
+  }
+  console.log("keywords", keywords);
+  localStorage.setItem("keywords", keywords);
+
+  // Redirect to search_results.html with keywords as query parameter
+  window.location.href = `search_results.html?q=${encodeURIComponent(
+    keywords
+  )}`;
+
+  event.preventDefault();
+  var newKeyWord = localStorage.getItem("keywords");
+  console.log("newKeyWord", newKeyWord);
+  document.querySelector(".result_search_bar input").value = newKeyWord;
+  document.querySelector(
+    ".search_result h2"
+  ).textContent = `Search Result for: ${newKeyWord}`;
+  document.querySelector(
+    ".search_result p"
+  ).textContent = `Search Result for...: ${newKeyWord}`;
 }

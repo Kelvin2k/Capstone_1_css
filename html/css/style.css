@@ -153,7 +153,7 @@ body header nav.navbar .container .collapse ul li i.fa-sun::before {
 }
 .carousel .carousel_text p {
   font-size: 21px;
-  color: #179a46;
+  color: white;
 }
 @media screen and (max-width: 576px) {
   .carousel .carousel_text p {
@@ -316,13 +316,41 @@ body .search_screen_overlay {
   top: 0;
   width: 100%;
   height: 100%;
-  background: #454545;
+  background-color: rgba(69, 69, 69, 0.5725490196);
   display: none;
 }
-body .search_screen_overlay .searchBar {
-  left: 50%;
-  top: 50%;
-  transition: translate(-50%, -50%);
+body .search_x_mark {
+  z-index: 12;
+  position: fixed;
+  left: 57%;
+  top: 35%;
+  font-size: 40px;
+  display: none;
+  cursor: pointer;
+}
+body .search_bar {
+  z-index: 11;
+  width: fit-content;
+  left: 35%;
+  top: 45%;
+  position: fixed;
+  display: grid;
+  grid-template-columns: 5.5fr 1fr;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+body .search_bar input {
+  border-radius: 5px 0 0 5px;
+  padding: 5px 15px;
+  display: none;
+  border: none;
+}
+body .search_bar button.search {
+  padding: 15px 20px;
+  background-color: #179a46;
+  color: white;
+  border-radius: 0 10px 10px 0;
+  border: none;
+  display: none;
 }
 
 .blog_item_page {
@@ -1035,7 +1063,7 @@ body .search_screen_overlay .searchBar {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   margin: 10px 5px 10px 15px;
   border-radius: 20px;
-  height: 400px;
+  height: 300px;
 }
 .home_page .testimonials .container .row_testimonials div .card .card-body {
   padding: 50px 30px;
@@ -1818,4 +1846,37 @@ body .search_screen_overlay .searchBar {
 }
 .page_contact .map iframe {
   width: 100%;
+}
+
+.search_result {
+  padding: 80px 0px;
+}
+.search_result .container h2 {
+  font-size: 40px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.search_result .container p {
+  font-size: 21px;
+  color: #696969;
+  margin: 20px 0;
+}
+.search_result .container .result_search_bar {
+  width: fit-content;
+  display: grid;
+  grid-template-columns: 5.5fr 1fr;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 0 5px 5px 0;
+}
+.search_result .container .result_search_bar input {
+  border-radius: 5px 0 0 5px;
+  padding: 5px 15px;
+  border: none;
+}
+.search_result .container .result_search_bar button.search {
+  padding: 15px 20px;
+  background-color: #179a46;
+  color: white;
+  border-radius: 0 10px 10px 0;
+  border: none;
 }/*# sourceMappingURL=style.css.map */

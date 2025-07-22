@@ -1,0 +1,35 @@
+.search_result {
+  padding: 80px 0px;
+  .container {
+    h2 {
+      font-size: 40px;
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+    p {
+      font-size: 21px;
+      color: #696969;
+      margin: 20px 0;
+    }
+    .result_search_bar {
+      width: fit-content;
+      display: grid;
+      grid-template-columns: 5.5fr 1fr;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      border-radius: 0 5px 5px 0;
+
+      input {
+        border-radius: 5px 0 0 5px;
+        padding: 5px 15px;
+        border: none;
+      }
+      button.search {
+        padding: 15px 20px;
+        background-color: #179a46;
+        color: white;
+        border-radius: 0 10px 10px 0;
+        border: none;
+      }
+    }
+  }
+}
