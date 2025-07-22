@@ -167,6 +167,56 @@ function applyDarkTheme() {
   footer.forEach((footer) => {
     footer.style.backgroundColor = "#1B1B1B";
   });
+
+  // Add hover effects for card titles
+  var cardTitles = document.querySelectorAll(".card-body h4");
+  cardTitles.forEach((title) => {
+    title.addEventListener("mouseover", () => {
+      title.style.color = "#179a46"; // Replace with $color_main value
+    });
+    title.addEventListener("mouseout", () => {
+      title.style.color = "white";
+    });
+  });
+
+  // Add hover effects for card text
+  var cardTexts = document.querySelectorAll(".card_text p");
+  cardTexts.forEach((text) => {
+    text.addEventListener("mouseover", () => {
+      text.style.color = "red";
+    });
+    text.addEventListener("mouseout", () => {
+      text.style.color = "white";
+    });
+  });
+
+  // Add hover effects for readmore
+  var cardTexts = document.querySelectorAll(
+    ".readMore p.readMore, .team_image h4"
+  );
+  cardTexts.forEach((text) => {
+    text.addEventListener("mouseover", () => {
+      text.style.color = "#179a46";
+    });
+    text.addEventListener("mouseout", () => {
+      text.style.color = "white";
+    });
+  });
+
+  // Add hover effects for pagination links
+  var pageLinks = document.querySelectorAll(".pages a");
+  pageLinks.forEach((link) => {
+    if ((link.style.color = link.classList.contains("active"))) {
+      link.style.color = "#179a46";
+    } else {
+      link.addEventListener("mouseover", () => {
+        link.style.color = "#179a46"; // Replace with $color_main value
+      });
+      link.addEventListener("mouseout", () => {
+        link.style.color = "white";
+      });
+    }
+  });
 }
 
 function findPage() {
