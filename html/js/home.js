@@ -38,6 +38,17 @@ if (document.querySelector(".row_testimonials")) {
   });
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  if (localStorage.getItem("theme") == "dark") {
+    applyDarkTheme();
+  }
+});
+document.querySelector(".fa-sun").onclick = function applyLightTheme() {
+  localStorage.setItem("theme", "light");
+  location.reload();
+};
+document.querySelector(".fa-moon").onclick = applyDarkTheme;
+
 function applyDarkTheme() {
   localStorage.setItem("theme", "dark");
   document.querySelector(".fa-moon").style.display = "none";
@@ -97,17 +108,7 @@ function applyDarkTheme() {
     footer.style.backgroundColor = "#1B1B1B";
   });
 }
-document.querySelector(".fa-moon").onclick = applyDarkTheme;
 
-document.querySelector(".fa-sun").onclick = function applyLightTheme() {
-  localStorage.setItem("theme", "light");
-  location.reload();
-};
-
-document.addEventListener("DOMContentLoaded", () => {
-  if (localStorage.getItem("theme") == "dark") {
-    applyDarkTheme();
-  } else {
-    applyLightTheme();
-  }
-});
+function findPage() {
+  console.log("hello");
+}

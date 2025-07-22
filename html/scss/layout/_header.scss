@@ -1,76 +1,78 @@
-header {
-  background-color: white;
-  top: 0;
-  left: 0;
-  position: fixed;
-  z-index: 10;
-  width: 100%;
-  nav.navbar {
-    .container {
-      @media screen and (max-width: 576px) {
-        padding: 0 20px;
-      }
-      a.navbar-brand {
-        color: $color_main;
-        font-weight: 700;
-      }
-      a.nav-link {
-        font-weight: 500;
-      }
-      a.active {
-        color: $color_main;
-        font-weight: 500;
-      }
-      button {
-        span {
+body {
+  header {
+    background-color: white;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    nav.navbar {
+      .container {
+        @media screen and (max-width: 576px) {
+          padding: 0 20px;
         }
-      }
-      .collapse {
-        ul {
-          li {
-            transition: all 0.5s;
-            &:hover a {
-              color: $color_main !important;
-            }
-            a {
-              position: relative;
+        a.navbar-brand {
+          color: $color_main;
+          font-weight: 700;
+        }
+        a.nav-link {
+          font-weight: 500;
+        }
+        a.active {
+          color: $color_main;
+          font-weight: 500;
+        }
+        button {
+          span {
+          }
+        }
+        .collapse {
+          ul {
+            li {
               transition: all 0.5s;
-              &:hover::before {
-                width: 80%;
+              &:hover a {
+                color: $color_main !important;
               }
-              &:before {
-                content: "";
-                position: absolute;
-                bottom: 0;
-                height: 3px;
-                background-color: $color_main;
-                width: 0;
+              a {
+                position: relative;
                 transition: all 0.5s;
+                &:hover::before {
+                  width: 80%;
+                }
+                &:before {
+                  content: "";
+                  position: absolute;
+                  bottom: 0;
+                  height: 3px;
+                  background-color: $color_main;
+                  width: 0;
+                  transition: all 0.5s;
+                }
               }
-            }
-            i.fa-magnifying-glass {
-              padding: 10px 10px;
-              background-color: rgba(128, 128, 128, 0.068);
-              border-radius: 50px;
-              font-size: 10px;
-              color: $color_main;
-              transition: all 0.5s;
-              cursor: pointer;
-              &:hover {
-                background-color: $color_main;
-                color: white;
+              i.fa-magnifying-glass {
+                padding: 10px 10px;
+                background-color: rgba(128, 128, 128, 0.068);
+                border-radius: 50px;
+                font-size: 10px;
+                color: $color_main;
+                transition: all 0.5s;
+                cursor: pointer;
+                &:hover {
+                  background-color: $color_main;
+                  color: white;
+                }
               }
-            }
-            i.fa-moon {
-              &::before {
-                display: inline;
-                color: pink;
+              i.fa-moon {
+                &::before {
+                  display: inline;
+                  color: pink;
+                }
               }
-            }
-            i.fa-sun {
-              display: none;
-              &::before {
-                color: pink;
+              i.fa-sun {
+                display: none;
+                &::before {
+                  color: pink;
+                }
               }
             }
           }

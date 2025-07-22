@@ -34,7 +34,7 @@
         @media screen and (max-width: 576px) {
           bottom: 0;
           right: 0;
-          transform: translate(-50%, -30%);
+          transform: translate(-60%, -10%);
         }
         .container_text {
           left: 50%;
@@ -66,7 +66,7 @@
           }
         }
         .btn {
-          transform: translate(-80%, -100%);
+          transform: translate(-82%, -100%);
           margin: 0;
           padding: 0;
           @media screen and (max-width: 1200px) {
@@ -89,8 +89,8 @@
               padding: 10px 20px;
             }
             @media screen and (max-width: 576px) {
-              font-size: 5px;
-              padding: 10px 20px;
+              font-size: 10px;
+              padding: 10px 15px;
             }
           }
           a.btnContactUs {
@@ -201,6 +201,9 @@
             @media screen and (max-width: 992px) {
               height: 350px;
             }
+            @media screen and (max-width: 576px) {
+              height: 400px;
+            }
             &:hover {
               background-color: #f3f1fd;
               transform: translateY(-7%);
@@ -263,6 +266,10 @@
     .container {
       grid-template-columns: 55% 1fr;
       gap: 30px;
+      @media screen and (max-width: 576px) {
+        grid-template-columns: 0.5fr 1fr;
+        gap: 20px;
+      }
       .offer_content_left {
         img {
           width: 100%;
