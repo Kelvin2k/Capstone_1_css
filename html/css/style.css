@@ -108,12 +108,32 @@ body header nav.navbar .container .collapse ul li i.fa-magnifying-glass:hover {
   background-color: #179a46;
   color: white;
 }
+body header nav.navbar .container .collapse ul li i.fa-moon {
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+body header nav.navbar .container .collapse ul li i.fa-moon:hover {
+  background-color: #179a46;
+}
+body header nav.navbar .container .collapse ul li i.fa-moon:hover::before {
+  color: white;
+}
 body header nav.navbar .container .collapse ul li i.fa-moon::before {
   display: inline;
   color: pink;
 }
 body header nav.navbar .container .collapse ul li i.fa-sun {
   display: none;
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+body header nav.navbar .container .collapse ul li i.fa-sun:hover {
+  background-color: #179a46;
+}
+body header nav.navbar .container .collapse ul li i.fa-sun:hover::before {
+  color: white;
 }
 body header nav.navbar .container .collapse ul li i.fa-sun::before {
   color: pink;

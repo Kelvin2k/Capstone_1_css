@@ -63,6 +63,15 @@ body {
                 }
               }
               i.fa-moon {
+                padding: 10px;
+                border-radius: 50%;
+                transition: all 0.5s;
+                &:hover {
+                  background-color: $color_main;
+                }
+                &:hover::before {
+                  color: white;
+                }
                 &::before {
                   display: inline;
                   color: pink;
@@ -70,6 +79,15 @@ body {
               }
               i.fa-sun {
                 display: none;
+                padding: 10px;
+                border-radius: 50%;
+                transition: all 0.5s;
+                &:hover {
+                  background-color: $color_main;
+                }
+                &:hover::before {
+                  color: white;
+                }
                 &::before {
                   color: pink;
                 }
