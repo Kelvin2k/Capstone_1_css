@@ -58,7 +58,8 @@
                                 Pages
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./pages_blog/pages_blog_1.html">Blog Posts</a></li>
+                                <li><a class="dropdown-item" href="./pages_blog/pages_blog_1.html">Blog Posts</a>
+
                                 <li><a class="dropdown-item" href="./pages_landing.html">Landing Page</a></li>
                             </ul>
                         </li>
@@ -79,23 +80,24 @@
             </div>
         </nav>
     </header>
-    <section class="carousel">
-        <img src="./../img/banner4.jpg" alt="">
-        <div class="carousel_text">
-            <h2>Search Results for: </h2>
-            <p><a href="./../html/index.html">Home</a> <span><i class="fa-solid fa-angles-right"></i></span> Search
-                Results for....
-            </p>
-        </div>
-    </section>
+
     <main class="search_result">
+        <section class="carousel">
+            <img src="./../img/banner4.jpg" alt="">
+            <div class="carousel_text">
+                <h2>Search Results for: </h2>
+                <p><a href="./../html/index.html">Home</a> <span><i class="fa-solid fa-angles-right"></i></span> Search
+                    Results for....
+                </p>
+            </div>
+        </section>
         <div class="container">
             <h2>Nothing Found</h2>
             <p class="search_result_text">Sorry, but nothing matched your search terms. Please try again with some
                 different keywords.</p>
             <div class="result_search_bar text-lg-center">
                 <input type="text" placeholder="Search...">
-                <button class="search" onclick="lookingforInfo()">Search</button>
+                <button class="search" onclick="getFindResultInPage()">Search</button>
             </div>
         </div>
     </main>
@@ -145,21 +147,21 @@
                 <p>© 2025 All Rights Reserved by <span>W3Layouts.</span></p>
             </div>
         </div>
+        <div class="search_screen_overlay">
 
+            <div class="search_bar">
+                <input type="text" placeholder="Search...">
+                <button class="search" onclick="lookingforInfo()">Search</button>
+                <div class="search_x_mark">
+                    <i class="fa-solid fa-xmark" onclick="closeFindPage()"></i>
+                </div>
+            </div>
+        </div>
         <!-- back to top  -->
         <a href="#" class="cd-top text-replace js-cd-top">
             <i class="fa-solid fa-chevron-up"></i>
         </a>
 
-        <div class="search_screen_overlay">
-        </div>
-        <div class="search_x_mark">
-            <i class="fa-solid fa-xmark" onclick="closeFindPage()"></i>
-        </div>
-        <div class="search_bar">
-            <input type="text" placeholder="Search...">
-            <button class="search">Search</button>
-        </div>
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -175,6 +177,8 @@
     </script>
     <script src="./js/backToTop/assets/js/util.js"></script>
     <script src="./js/home.js"></script>
+    <script src="./js/search.js"></script>
+
 
 </body>
 

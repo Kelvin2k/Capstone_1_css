@@ -251,18 +251,11 @@ function lookingforInfo() {
   localStorage.setItem("keywords", keywords);
 
   // Redirect to search_results.html with keywords as query parameter
-  window.location.href = `search_results.html?q=${encodeURIComponent(
-    keywords
-  )}`;
+  if (true) {
+    window.location.href = `/html/search_results.html?q=${encodeURIComponent(
+      keywords
+    )}`;
+  }
 
-  event.preventDefault();
-  var newKeyWord = localStorage.getItem("keywords");
-  console.log("newKeyWord", newKeyWord);
-  document.querySelector(".result_search_bar input").value = newKeyWord;
-  document.querySelector(
-    ".search_result h2"
-  ).textContent = `Search Result for: ${newKeyWord}`;
-  document.querySelector(
-    ".search_result p"
-  ).textContent = `Search Result for...: ${newKeyWord}`;
+  getFindResult();
 }

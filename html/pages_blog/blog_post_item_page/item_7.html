@@ -63,7 +63,7 @@
                             <a class="nav-link" href="./../../contact.html">Contact</a>
                         </li>
                         <li class="d-flex align-items-center me-2">
-                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-magnifying-glass" onclick="findPage()"></i>
                         </li>
                         <li class="d-flex align-items-center">
                             <i class="fa-regular fa-moon"></i>
@@ -195,6 +195,15 @@
             </div>
             <div class="content_down">
                 <p>© 2025 All Rights Reserved by <span>W3Layouts.</span></p>
+            </div>
+        </div>
+        <div class="search_screen_overlay">
+            <div class="search_bar">
+                <input type="text" placeholder="Search...">
+                <button class="search" onclick="lookingforInfo()">Search</button>
+                <div class="search_x_mark">
+                    <i class="fa-solid fa-xmark" onclick="closeFindPage()"></i>
+                </div>
             </div>
         </div>
     </footer>
