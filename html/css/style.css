@@ -1482,6 +1482,7 @@ body .search_screen_overlay .search_bar .search_x_mark {
 @media screen and (max-width: 780px) {
   .about_page .ourTeam .container .team_image {
     grid-template-columns: repeat(1, 1fr);
+    padding: 0 30px;
     margin-bottom: 20px;
   }
 }
