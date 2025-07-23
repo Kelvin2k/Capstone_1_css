@@ -1481,7 +1481,8 @@ body .search_screen_overlay .search_bar .search_x_mark {
 }
 @media screen and (max-width: 780px) {
   .about_page .ourTeam .container .team_image {
-    gap: 5px;
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 20px;
   }
 }
 .about_page .ourTeam .container .team_image .team_item .image {
@@ -1509,16 +1510,6 @@ body .search_screen_overlay .search_bar .search_x_mark {
     font-size: 20px;
   }
 }
-@media screen and (max-width: 780px) {
-  .about_page .ourTeam .container .team_image .team_item h4 {
-    font-size: 15px;
-  }
-}
-@media screen and (max-width: 576px) {
-  .about_page .ourTeam .container .team_image .team_item h4 {
-    font-size: 10px;
-  }
-}
 .about_page .ourTeam .container .team_image .team_item p {
   font-size: 18px;
   font-weight: 400;
@@ -1527,16 +1518,6 @@ body .search_screen_overlay .search_bar .search_x_mark {
 @media screen and (max-width: 992px) {
   .about_page .ourTeam .container .team_image .team_item p {
     font-size: 15px;
-  }
-}
-@media screen and (max-width: 780px) {
-  .about_page .ourTeam .container .team_image .team_item p {
-    font-size: 10px;
-  }
-}
-@media screen and (max-width: 576px) {
-  .about_page .ourTeam .container .team_image .team_item p {
-    font-size: 8px;
   }
 }
 .about_page .ourTeam .container .team_image .team_item .icon i {

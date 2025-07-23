@@ -202,7 +202,8 @@
         grid-template-columns: repeat(4, 1fr);
         gap: 30px;
         @media screen and (max-width: 780px) {
-          gap: 5px;
+          grid-template-columns: repeat(1, 1fr);
+          margin-bottom: 20px;
         }
         .team_item {
           .image {
@@ -227,24 +228,24 @@
             @media screen and (max-width: 992px) {
               font-size: 20px;
             }
-            @media screen and (max-width: 780px) {
-              font-size: 15px;
-            }
-            @media screen and (max-width: 576px) {
-              font-size: 10px;
-            }
+            // @media screen and (max-width: 780px) {
+            //   font-size: 15px;
+            // }
+            // @media screen and (max-width: 576px) {
+            //   font-size: 10px;
+            // }
           }
           p {
             @include textNormal;
             @media screen and (max-width: 992px) {
               font-size: 15px;
             }
-            @media screen and (max-width: 780px) {
-              font-size: 10px;
-            }
-            @media screen and (max-width: 576px) {
-              font-size: 8px;
-            }
+            // @media screen and (max-width: 780px) {
+            //   font-size: 10px;
+            // }
+            // @media screen and (max-width: 576px) {
+            //   font-size: 8px;
+            // }
           }
           .icon {
             i {
