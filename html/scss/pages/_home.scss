@@ -538,6 +538,9 @@
             margin: 10px 5px 10px 15px;
             border-radius: 20px;
             height: 300px;
+            @media screen and (max-width: 576px) {
+              height: 400px;
+            }
             .card-body {
               padding: 50px 30px;
               h5 {

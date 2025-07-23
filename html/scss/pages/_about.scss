@@ -124,6 +124,9 @@
     padding: 80px 20px;
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
+    @media screen and (max-width: 576px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
     .content_left {
       padding-top: 5px;
       text-align: right;

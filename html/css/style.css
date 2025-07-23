@@ -1066,6 +1066,11 @@ body .search_screen_overlay .search_bar .search_x_mark {
   border-radius: 20px;
   height: 300px;
 }
+@media screen and (max-width: 576px) {
+  .home_page .testimonials .container .row_testimonials div .card {
+    height: 400px;
+  }
+}
 .home_page .testimonials .container .row_testimonials div .card .card-body {
   padding: 50px 30px;
 }
@@ -1346,6 +1351,11 @@ body .search_screen_overlay .search_bar .search_x_mark {
   grid-template-columns: repeat(2, 1fr);
   gap: 50px;
 }
+@media screen and (max-width: 576px) {
+  .about_page .whoWeAre {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .about_page .whoWeAre .content_left {
   padding-top: 5px;
   text-align: right;
@@ -1538,6 +1548,13 @@ body .search_screen_overlay .search_bar .search_x_mark {
   gap: 100px;
   padding: 80px 20px;
 }
+@media screen and (max-width: 576px) {
+  .service_page .container .service_row {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    text-align: center;
+  }
+}
 .service_page .container .service_row .image {
   overflow: hidden;
 }
@@ -1577,6 +1594,7 @@ body .search_screen_overlay .search_bar .search_x_mark {
     font-size: 20px;
     font-weight: 600;
     text-transform: capitalize;
+    margin-bottom: 30px;
   }
 }
 .service_page .container .service_row .content .readMore p {
@@ -1600,6 +1618,12 @@ body .search_screen_overlay .search_bar .search_x_mark {
 }
 .service_page .container .service_row .content .readMore p:hover {
   color: #179a46;
+}
+@media screen and (max-width: 576px) {
+  .service_page .container .service_row .content .readMore {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .gallery_page {
@@ -1776,9 +1800,20 @@ body .search_screen_overlay .search_bar .search_x_mark {
   font-weight: 600;
   text-transform: capitalize;
 }
+@media screen and (max-width: 576px) {
+  .page_contact .container .content_up {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
 .page_contact .container .content_down {
   grid-template-columns: 1.5fr 1fr;
   gap: 50px;
+}
+@media screen and (max-width: 576px) {
+  .page_contact .container .content_down {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .page_contact .container .content_down .content_left .content_name_email {
   grid-template-columns: 1fr 1fr;
@@ -1800,6 +1835,12 @@ body .search_screen_overlay .search_bar .search_x_mark {
   display: flex;
   justify-content: end;
 }
+@media screen and (max-width: 576px) {
+  .page_contact .container .content_down .content_left .button {
+    margin-top: 20px;
+    justify-content: center;
+  }
+}
 .page_contact .container .content_down .content_left .button button.btn_send_message {
   background-color: #179a46;
   color: white;
@@ -1815,6 +1856,12 @@ body .search_screen_overlay .search_bar .search_x_mark {
   margin-bottom: 20px;
   display: grid;
   grid-template-columns: 0.05fr 1fr;
+}
+@media screen and (max-width: 576px) {
+  .page_contact .container .content_down .content_right .row {
+    grid-template-columns: repeat(0.5, 1fr);
+    padding: 0 25%;
+  }
 }
 .page_contact .container .content_down .content_right .row i {
   color: #179a46;
