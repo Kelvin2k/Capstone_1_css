@@ -791,7 +791,7 @@ body .search_screen_overlay .search_bar .search_x_mark {
 }
 @media screen and (max-width: 576px) {
   .home_page .offer .container {
-    grid-template-columns: 0.5fr 1fr;
+    grid-template-columns: repeat(1, 1fr);
     gap: 20px;
   }
 }
