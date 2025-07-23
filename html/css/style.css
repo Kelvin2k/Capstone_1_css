@@ -734,9 +734,14 @@ body .search_screen_overlay .search_bar .search_x_mark {
   padding: 20px;
   border: 2px dashed transparent;
 }
+@media screen and (max-width: 1400px) {
+  .home_page .services_provide .services_container .row .column .card {
+    height: 550px;
+  }
+}
 @media screen and (max-width: 1200px) {
   .home_page .services_provide .services_container .row .column .card {
-    height: 500px;
+    height: 600px;
   }
 }
 @media screen and (max-width: 992px) {

@@ -195,8 +195,11 @@
             transform: translateY(0);
             padding: 20px;
             border: 2px dashed transparent;
+            @media screen and (max-width: 1400px) {
+              height: 550px;
+            }
             @media screen and (max-width: 1200px) {
-              height: 500px;
+              height: 600px;
             }
             @media screen and (max-width: 992px) {
               height: 350px;
